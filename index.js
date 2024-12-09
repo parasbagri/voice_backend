@@ -20,6 +20,8 @@ app.post("/synthesize", (req, res) => {
 
   const pythonScript = path.join(__dirname, "tts_synthesizer.py");
   const outputPath = path.join(__dirname, "audio", "output.mp3");
+  // const command = `python ${pythonScript} "${text}" "${voice}" "${outputPath}"`;
+
   const command = `python ${pythonScript} "${text}" "${outputPath}"`;
 
   exec(command, (error, stdout, stderr) => {

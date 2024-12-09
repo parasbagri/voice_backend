@@ -19,6 +19,8 @@ def synthesize_text():
     # Command line arguments se text taken
     text = sys.argv[1]
     output_path = sys.argv[2]
+    # voice = sys.argv[2]  # Voice parameter (male/female)
+    #  output_path = sys.argv[3]
     
     # Text ko audio me convert 
     tts = gTTS(text=text, lang='hi')  # 'en' language specify 
